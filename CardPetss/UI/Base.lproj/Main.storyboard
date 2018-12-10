@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gH7-Lf-9jb">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Page View Controller-->
+        <scene sceneID="coF-jC-KxZ">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="gH7-Lf-9jb" customClass="PageViewController" customModule="Guess_the_Pet" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LvW-ds-YJx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="547" y="1271"/>
+        </scene>
+        <!--Card View Controller-->
+        <scene sceneID="vTq-XN-M1x">
+            <objects>
+                <viewController storyboardIdentifier="CardViewController" id="1Y6-sJ-fz5" customClass="CardViewController" customModule="Guess_the_Pet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YNZ-ar-31V"/>
+                        <viewControllerLayoutGuide type="bottom" id="4f0-by-GGe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1bK-bL-MAm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hj9-05-QZP">
+                                <rect key="frame" x="62.5" y="167" width="250" height="333.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODx-8D-7bt">
+                                        <rect key="frame" x="102.5" y="154" width="45" height="25"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Italic" family="Avenir Next" pointSize="18"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.057124957439999999" green="0.43748360870000003" blue="0.19233113530000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="ODx-8D-7bt" secondAttribute="centerY" id="1xu-bt-LID"/>
+                                    <constraint firstAttribute="height" secondItem="hj9-05-QZP" secondAttribute="width" multiplier="4:3" id="EyS-02-tH3"/>
+                                    <constraint firstAttribute="centerX" secondItem="ODx-8D-7bt" secondAttribute="centerX" id="Fbp-kk-MxF"/>
+                                    <constraint firstAttribute="height" secondItem="hj9-05-QZP" secondAttribute="width" multiplier="3:4" id="WWS-ZU-2dH"/>
+                                    <constraint firstItem="ODx-8D-7bt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hj9-05-QZP" secondAttribute="leading" constant="20" id="b37-c8-eAV"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ODx-8D-7bt" secondAttribute="trailing" constant="20" id="mhP-oA-lQJ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="WWS-ZU-2dH"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="EyS-02-tH3"/>
+                                        <include reference="WWS-ZU-2dH"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="skb-Jk-RtB" appends="YES" id="arE-51-SiO"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hj9-05-QZP" firstAttribute="width" secondItem="1bK-bL-MAm" secondAttribute="width" multiplier="1/2" id="8mi-K1-gu4"/>
+                            <constraint firstAttribute="centerX" secondItem="hj9-05-QZP" secondAttribute="centerX" id="MUY-da-L8p"/>
+                            <constraint firstAttribute="centerY" secondItem="hj9-05-QZP" secondAttribute="centerY" id="QoA-qv-ifh"/>
+                            <constraint firstItem="hj9-05-QZP" firstAttribute="height" secondItem="1bK-bL-MAm" secondAttribute="height" multiplier="1/2" id="cTa-Mw-kr0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5Kt-gB-uYn"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8mi-K1-gu4"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="8mi-K1-gu4"/>
+                                <exclude reference="cTa-Mw-kr0"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="cardView" destination="hj9-05-QZP" id="S8i-B4-shJ"/>
+                        <outlet property="titleLabel" destination="ODx-8D-7bt" id="siX-7E-51S"/>
+                        <segue destination="3z0-PY-QUz" kind="presentation" identifier="reveal" id="3BA-sI-DN2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sUI-0v-Hl6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="skb-Jk-RtB">
+                    <connections>
+                        <action selector="handleTap" destination="1Y6-sJ-fz5" id="bCh-92-tbr"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1352" y="1271"/>
+        </scene>
+        <!--Reveal View Controller-->
+        <scene sceneID="BiE-CC-zPB">
+            <objects>
+                <viewController storyboardIdentifier="RevealViewController" id="3z0-PY-QUz" customClass="RevealViewController" customModule="Guess_the_Pet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vVO-jO-qkD"/>
+                        <viewControllerLayoutGuide type="bottom" id="jbU-ap-yed"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jL4-ca-khA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6n-iW-Chz">
+                                <rect key="frame" x="147.5" y="626" width="80" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="15"/>
+                                <state key="normal" title="Start Over!">
+                                    <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissPressed:" destination="3z0-PY-QUz" eventType="touchUpInside" id="39I-O8-v3x"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Na2-h5-Ty1">
+                                <rect key="frame" x="0.0" y="83.5" width="375" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" secondItem="Na2-h5-Ty1" secondAttribute="width" multiplier="3:4" id="JG5-y2-JrW"/>
+                                    <constraint firstAttribute="width" secondItem="Na2-h5-Ty1" secondAttribute="height" multiplier="3:4" id="hJn-th-nOT"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JG5-y2-JrW"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="JG5-y2-JrW"/>
+                                        <exclude reference="hJn-th-nOT"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAB-Bk-djw">
+                                <rect key="frame" x="166" y="51.5" width="43" height="24"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-MediumItalic" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jbU-ap-yed" firstAttribute="top" secondItem="x6n-iW-Chz" secondAttribute="bottom" constant="8" symbolic="YES" id="3lv-3I-3wJ"/>
+                            <constraint firstAttribute="centerX" secondItem="hAB-Bk-djw" secondAttribute="centerX" id="4Ce-61-SDl"/>
+                            <constraint firstItem="Na2-h5-Ty1" firstAttribute="height" secondItem="jL4-ca-khA" secondAttribute="height" multiplier="3/4" id="9OV-hW-wp3"/>
+                            <constraint firstItem="Na2-h5-Ty1" firstAttribute="width" secondItem="jL4-ca-khA" secondAttribute="width" multiplier="1/2" id="Ypu-FL-T8P"/>
+                            <constraint firstAttribute="centerX" secondItem="Na2-h5-Ty1" secondAttribute="centerX" id="dTA-GP-7bK"/>
+                            <constraint firstAttribute="centerY" secondItem="Na2-h5-Ty1" secondAttribute="centerY" id="f6D-CO-TIH"/>
+                            <constraint firstItem="Na2-h5-Ty1" firstAttribute="top" secondItem="hAB-Bk-djw" secondAttribute="bottom" constant="8" id="fhr-5G-Jpx"/>
+                            <constraint firstAttribute="centerX" secondItem="x6n-iW-Chz" secondAttribute="centerX" id="gX3-Lz-wWl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sot-m5-eLf"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Ypu-FL-T8P"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="9OV-hW-wp3"/>
+                                <include reference="Ypu-FL-T8P"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Na2-h5-Ty1" id="SvE-HQ-uJp"/>
+                        <outlet property="titleLabel" destination="hAB-Bk-djw" id="ABC-Rd-SIK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t3G-4a-Xhu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2110" y="1271"/>
+        </scene>
+    </scenes>
+</document>
